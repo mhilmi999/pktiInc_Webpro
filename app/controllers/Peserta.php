@@ -151,9 +151,22 @@ class Peserta extends Controller {
         if(!$_SESSION['roll'] === 'peserta'){
             $this->redirect('Home', 'Index');
         }
+        $id_user = $_SESSION['id_user'];
+        $sertifKu = $this->userModel->tampilSertifPesertaku($id_user);
+        //var_dump($sertifKu);
+        //die();
+        if(!$sertifKu){
+            $this->view('common/header_peserta');
+            $this->view('peserta/sertif');
+            $this->view('common/footer_peserta');
+        }else{
+            $this->view('common/header_peserta');
+            $this->view('peserta/sertifAda', false, array(
+                'data' => $sertifKu
+            ));
+            $this->view('common/footer_peserta');
+            
+        }
 
-        $this->view('common/header_peserta');
-        $this->view('peserta/sertif');
-        $this->view('common/footer_peserta');
     }
 }

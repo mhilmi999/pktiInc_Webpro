@@ -1,6 +1,6 @@
 <?php
 
-define('BASEURL', 'http://localhost:8080/Webpro/public');
+define('BASEURL', 'http://localhost:8080/pktiInc_Webpro/public');
 
 
 //DB

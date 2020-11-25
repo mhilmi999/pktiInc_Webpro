@@ -48,6 +48,13 @@
   <!-- Custom scripts for all pages-->
   <script src="<?= BASEURL ?>/asset2/js/sb-admin-2.min.js"></script>
 
+  <script>
+      $('.custom-file-input').on('change', function() {
+          let fileName = $(this).val().split('\\').pop();
+          $(this).next('.custom-file-label').addClass("selected").html(fileName);
+      });
+  </script>
+
   <!-- Page level plugins -->
   <script src="<?= BASEURL ?>/asset2/vendor/chart.js/Chart.min.js"></script>
 

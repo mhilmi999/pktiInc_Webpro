@@ -37,7 +37,7 @@ class Controller {
             /*
                 * Use @header to redirect the page:
             */
-            header("Location: http://localhost:8080/Webpro/public/" . $location);
+            header("Location: http://localhost:8080/pktiInc_Webpro/public/" . $location);
             exit;
         }
 }

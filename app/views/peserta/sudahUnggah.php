@@ -37,7 +37,7 @@
             <?php if($status['status'] == 3)
             {
               ?>
-              <td>Selesai</td>
+              <td>Selesai Diperiksa</td>
             <?php } ?>
           </tr>
 
